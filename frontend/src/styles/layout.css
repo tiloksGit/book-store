@@ -24,9 +24,8 @@ body {
 
   flex: 1;
   overflow-y: auto;
-  /* For smooth scrolling on iOS devices */
-  margin-left: 300px; /* Set the margin to the width of the Sidebar */
-  margin-right: 300px; /* Set the margin to the width of the AuthenticateUser */
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .right-layout {
@@ -34,7 +33,6 @@ body {
   width: 300px;
   height: 78.5%;
   margin-bottom: 150px;
-  /* border-left: 1px solid rgb(196, 175, 141); */
   display: flex;
   flex-direction: column;
   justify-content: center;
