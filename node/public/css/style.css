@@ -1,0 +1,12 @@
+.ht {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #006;
+  font-size: 1.5rem;
+  text-align: center;
+  color: antiquewhite;
+  height: 100vh;
+  animation-name: test;
+}
+
+@keyframes test {
+}

@@ -1,0 +1,10 @@
+15-05-23	00:23:56	bc1028fc-57f9-4898-be08-471893dd4839	undefined: ESERVFAIL	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net
+16-05-23	11:10:52	90feb8c8-970d-4139-aa94-54918b3196af	undefined: ESERVFAIL	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net
+17-05-23	14:59:51	fa798c66-89d4-4005-b21e-4feacf2df365	undefined: ESERVFAIL	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net
+21-05-23	14:11:52	220e332e-3ccb-41bc-afed-113f911e4382	undefined: ESERVFAIL	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net
+21-05-23	14:13:03	6b635640-300a-4c18-be74-0af2e5598148	undefined: ESERVFAIL	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net
+21-05-23	14:16:11	3daa8494-df7b-42b4-b81f-e90ba88a67e4	undefined: undefined	undefined	undefined
+21-05-23	17:44:05	de044f6a-d93d-46fc-975f-6a38ac02840c	undefined: ETIMEOUT	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net
+23-05-23	16:24:01	6b3a9c04-d126-47b9-a16e-99977b5b1368	undefined: undefined	undefined	undefined
+23-05-23	22:30:26	3799d757-b453-41de-8feb-52d64d8b4caf	undefined: ESERVFAIL	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net
+24-05-23	23:02:20	6e76c9ca-17cd-466f-811d-7c7fe11ea979	undefined: ESERVFAIL	querySrv	_mongodb._tcp.cluster0.3lfgqkn.mongodb.net

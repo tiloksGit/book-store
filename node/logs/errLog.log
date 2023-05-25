@@ -1,0 +1,125 @@
+07-05-23	13:30:52	1decda8f-0e4d-4710-a5e5-ce2cfafdf66f	Error: Not allowed by cors	OPTIONSd	https://www.redhat.com
+07-05-23	13:30:52	1525e00d-2f44-4705-819d-09a22251e43e	Error: Not allowed by cors	GETd	https://www.redhat.com
+09-05-23	23:05:12	7057eaf6-9a65-46d3-96b7-5ea903b1e9d3	ReferenceError: ACL is not defined	GETd	undefined
+09-05-23	23:09:26	8f65e080-2a4b-4a28-b8c0-613a783936a5	ReferenceError: ACL is not defined	GETd	undefined
+09-05-23	23:12:36	1de6974c-991c-40d0-b000-3e183503af0b	ReferenceError: ACL is not defined	GETd	
+09-05-23	23:17:23	a1dd8fb6-8dc0-41c2-a4c6-ad4565743e63	ReferenceError: ACL is not defined	GET	postman
+09-05-23	23:39:39	49ca9922-e0db-4fb2-a98d-6c014d324f97	ReferenceError: passwd is not defined	POST	postman
+09-05-23	23:40:14	245f77d0-6bb2-4a41-8e3c-3c36b9517d39	ReferenceError: passwordd is not defined	POST	postman
+10-05-23	03:37:38	4c2423c0-f72c-4352-b7cf-4d4d827b2547	ObjectParameterError: Parameter "filter" to findOne() must be an object, got tilok_doley	DELETE	postman
+10-05-23	03:45:50	25a0df0a-97b5-4b82-9cee-bff4fdff85f1	ObjectParameterError: Parameter "filter" to findOne() must be an object, got 645a8c97c547e7058ac5a23a	DELETE	postman
+10-05-23	03:48:24	495705e3-f5ec-4c6a-a2bf-11939d20e7bc	TypeError: user.deleteOne is not a function	DELETE	postman
+10-05-23	05:48:34	c7223f38-0dd3-4613-a9c9-d773908e41ef	Error: Invalid select: select only takes 1 argument	GET	postman
+12-05-23	12:41:30	a62209db-6472-43fd-bddc-5853de58efc7	ValidationError: User validation failed: password: Path `password` is required., username: Path `username` is required.	POST	postman
+12-05-23	12:42:17	a7d904ae-8399-4c7b-b922-061f0a43d6a8	ValidationError: Book validation failed: uploadedBy: Path `uploadedBy` is required.	POST	postman
+12-05-23	16:32:24	b07a4629-4229-4f41-8286-07d32bdbbadb	StrictPopulateError: Cannot populate path `orderBy.userId` because it is not in your schema. Set the `strictPopulate` option to false to override.	GET	postman
+12-05-23	16:37:18	5a552584-8def-4758-87e7-d6452d04a9d2	StrictPopulateError: Cannot populate path `orderBy.userId` because it is not in your schema. Set the `strictPopulate` option to false to override.	GET	postman
+12-05-23	16:37:54	e6ab96b5-6ee6-4896-be68-657084ab4397	StrictPopulateError: Cannot populate path `orderBy.userId` because it is not in your schema. Set the `strictPopulate` option to false to override.	GET	postman
+12-05-23	16:40:23	859cca93-ce1e-47c7-aaf4-1ddcf15e3c42	StrictPopulateError: Cannot populate path `orderBy.userId` because it is not in your schema. Set the `strictPopulate` option to false to override.	GET	postman
+12-05-23	21:12:17	721663bb-a376-4c51-987c-8c9c2b35fea3	MongooseError: Model.findById() no longer accepts a callback	POST	undefined
+12-05-23	21:13:34	da07899e-ab3b-41f1-b0f7-69ce4838eb76	TypeError: Cannot read properties of undefined (reading 'push')	POST	undefined
+12-05-23	21:19:56	2a6dfbe8-1f22-46a5-bcee-97c0beab0eba	TypeError: Cannot read properties of undefined (reading 'push')	POST	undefined
+12-05-23	21:20:07	9f603a05-dee5-4ae0-89c7-a2e0308dc271	TypeError: Cannot read properties of undefined (reading 'push')	POST	undefined
+12-05-23	21:23:00	5913a923-51f5-4d07-b43f-a3e6276c94c1	TypeError: user.save is not a function	POST	undefined
+12-05-23	21:26:11	32577432-6ec3-410d-8940-de2e06e8bbb3	TypeError: user.save is not a function	POST	undefined
+12-05-23	21:40:37	49c775d2-13d2-4320-a8bc-fa7c8a5b3e66	ObjectParameterError: Parameter "filter" to findOne() must be an object, got ankita_rabha	POST	undefined
+12-05-23	23:26:17	c18e2ea7-9a97-4e21-9029-c66fda6bbaed	ValidationError: User validation failed: booksBought.0.bookId: Cast to ObjectId failed for value " 645e671434c54278f6450177" (type string) at path "bookId" because of "BSONError"	POST	undefined
+13-05-23	21:58:54	9f873389-a788-405b-ad3e-a6aca61033ef	Error: Not allowed by cors	OPTIONS	http://localhost:3000
+13-05-23	21:58:54	b51a956d-11d5-4635-b1fe-4911e8cba9ae	Error: Not allowed by cors	OPTIONS	http://localhost:3000
+14-05-23	00:59:26	8adef046-d387-4275-811b-ffb80bd21865	Error: Not allowed by cors	OPTIONS	https://admirable-sprite-e9d94d.netlify.app
+15-05-23	13:13:40	4797d776-2f21-40a1-9de1-aabe779f5a92	SyntaxError: Unexpected token o in JSON at position 1	POST	http://localhost:3000
+15-05-23	13:25:38	8fd99c53-53df-4a14-9580-a673aec2d7bc	SyntaxError: Unexpected token o in JSON at position 1	POST	http://localhost:3000
+15-05-23	13:25:38	1ef52c49-37bb-42ef-86f4-3b31e4e1a568	SyntaxError: Unexpected token o in JSON at position 1	POST	http://localhost:3000
+15-05-23	13:53:56	5007f7c8-dc8f-48bd-b96a-977eb1b7cd55	ObjectParameterError: Parameter "filter" to findOne() must be an object, got "hemtun beypi" (type string)	POST	undefined
+15-05-23	20:19:33	a8837dce-c259-4533-a7b8-ca561afff890	Error: Not allowed by cors	OPTIONS	http://localhost:3001
+15-05-23	20:19:33	fb4e9855-0444-4bc9-8787-e11d32ac1708	Error: Not allowed by cors	OPTIONS	http://localhost:3001
+15-05-23	22:19:53	d6f57787-cc95-45b4-a1da-97f0de19a21b	Error: Multipart: Boundary not found	POST	http://localhost:3000
+15-05-23	22:21:42	5cfaaf4c-7be4-4243-aef2-83a6e3363951	Error: Multipart: Boundary not found	POST	http://localhost:3000
+15-05-23	23:17:45	8909c455-74d1-455b-bc4b-4344c419c626	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:20:31	7c453bdf-3527-4813-9d36-94e9157e6d7a	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:23:05	75ff864a-a22b-4c90-b59c-0e800879d65e	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:26:14	dc3d0ec4-93d9-41c1-9195-6e1afdb81d46	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:29:52	72d48ae9-5257-46a1-9766-76d4d2f9694d	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:32:36	42d37a22-a7aa-4800-b733-ce5452c9a4f4	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:35:13	53ac0adf-5f2d-4f13-888d-52a407d8d065	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:44:36	92fabd4e-e966-4689-b561-fbe2c0f3b62a	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:48:34	beb3757d-fb0e-4ed8-87af-4e9135c4af5c	Error: Unexpected end of form	POST	http://localhost:3000
+15-05-23	23:54:15	22a14b2e-3c05-4f82-916d-06c8397c70e0	Error: Unexpected end of form	POST	http://localhost:3000
+16-05-23	00:05:13	0850ed97-96f3-4f88-bfa1-523862398be1	Error: Unexpected end of form	POST	http://localhost:3000
+16-05-23	00:06:06	7c72ddd1-20da-4929-8d7a-f792f538b764	Error: Unexpected end of form	POST	http://localhost:3000
+16-05-23	00:10:20	61eeda9a-39b5-4f7d-afe6-c3a48e881ea0	Error: Unexpected end of form	POST	http://localhost:3000
+16-05-23	00:12:13	5f8edf04-ccbe-464e-9170-0cfbaa6b8ba3	Error: Unexpected end of form	POST	http://localhost:3000
+16-05-23	00:14:49	f262e7b6-7440-4caf-9cd1-ff1b1cb75097	Error: Unexpected end of form	POST	undefined
+16-05-23	00:15:51	83cb3411-51e4-4c5f-b5ea-cfb2e15a3961	Error: ENOENT: no such file or directory, open '../avatar/p2.jpg'	POST	undefined
+16-05-23	00:18:01	246c71f1-6b65-4b22-b17d-d1b8d6a0ef67	Error: ENOENT: no such file or directory, open '../avatar/p1.jpg'	POST	http://localhost:3000
+16-05-23	00:18:27	906c0165-2e5d-4928-8b93-c19be080d49e	Error: ENOENT: no such file or directory, open '/avatar/p2.jpg'	POST	undefined
+16-05-23	00:31:53	b8376cf6-91f4-468d-9e07-8bf21ae325ca	ReferenceError: bcrypt is not defined	POST	http://localhost:3000
+16-05-23	00:36:22	0ec21e43-6f68-4efc-81fc-ada4eaadfb93	TypeError: Cannot read properties of undefined (reading 'path')	POST	http://localhost:3000
+16-05-23	01:00:35	1fc1e5b1-cfc8-48e8-80a1-f96141d9d2ad	ObjectParameterError: Parameter "filter" to findOne() must be an object, got "Tilok Doley" (type string)	DELETE	undefined
+16-05-23	02:11:58	2362e153-b0ab-48f5-83bd-2cdad9df738f	Error: data and hash arguments required	POST	undefined
+16-05-23	02:15:01	b92a82b0-eed5-4790-b74e-0ae5ef601134	Error: data and hash arguments required	POST	undefined
+16-05-23	02:26:26	773a57b2-7d73-4236-9b36-89fae74efcf2	TypeError: Cannot read properties of undefined (reading 'path')	POST	undefined
+16-05-23	03:52:00	207f308c-ec72-4d31-95ac-0fab910892f0	TypeError: res.status.json is not a function	POST	undefined
+16-05-23	11:06:20	459a9c9d-1a9a-44db-8e4d-8249cd6c800f	MongoServerSelectionError: getaddrinfo EAI_AGAIN ac-b22fm91-shard-00-00.3lfgqkn.mongodb.net	POST	http://localhost:3000
+16-05-23	15:54:14	487c4c7e-e372-40ae-a179-d84138a004ff	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+16-05-23	16:02:28	785d1cc9-3bd1-4581-9abd-a6b8f80fe214	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+16-05-23	16:02:29	0ac0dcf2-1b3a-45ca-8c43-88072b7440ba	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+16-05-23	16:02:29	706fe031-877d-4593-b7cb-383c8253b979	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+16-05-23	16:02:31	cd49c867-96bc-441b-a2cd-e8531ba4b9e6	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+16-05-23	21:13:55	5fde4f7a-ca86-411b-988d-321427d4a57e	Error: Unexpected end of form	POST	http://localhost:3000
+16-05-23	21:15:15	3c50fa8f-d516-4e6a-9576-2a809c6c4869	Error: Unexpected end of form	POST	http://localhost:3000
+16-05-23	22:21:05	518ab044-010b-4030-b71e-09be632ef5e1	TypeError: Cannot read properties of undefined (reading 'path')	POST	http://localhost:3000
+16-05-23	23:59:15	43f2a50b-0b2c-4cf3-8d2e-734e9b4c2379	Error: ENOENT: no such file or directory, open 'bookThumnail/images.png'	POST	undefined
+17-05-23	00:00:04	0a966777-6af4-4636-83f5-b703a00d18c8	ReferenceError: imgURL is not defined	POST	undefined
+17-05-23	00:00:42	05f1760d-882c-4d90-ae34-6b3ea837b2a1	ValidationError: Book validation failed: branch: Path `branch` is required.	POST	undefined
+17-05-23	00:24:31	ca2ab75e-06bf-46bb-bfd3-57085e1c900f	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"	GET	undefined
+17-05-23	00:29:42	bb68831f-a91e-4f81-bf3e-75645bdedc13	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"	GET	undefined
+17-05-23	00:29:42	a164e60f-7ea2-44fd-944f-a51fba826965	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"	GET	undefined
+17-05-23	00:33:45	ecbd155a-302a-4761-92bf-e415480a74c1	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"	GET	undefined
+17-05-23	00:34:50	a55608a0-c1a1-43c7-b1dc-219bce1c4f94	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"	GET	undefined
+17-05-23	00:35:16	e770f442-fa5e-4010-807b-908a805d805d	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"	GET	undefined
+17-05-23	00:36:07	a0dc394a-69d9-4369-ac48-88392007ac33	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"	GET	undefined
+17-05-23	02:26:47	ec4ab1a4-71d2-4177-8d02-2c4772e2f149	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	02:30:51	19c21022-b5c2-454a-8227-471a4bbcf829	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	02:48:16	4bb0cc03-8fe6-4cf6-b12c-25f9d080ee36	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	04:00:00	43aa93a2-8493-4f1b-b854-e87c541ec523	ValidationError: Book validation failed: uploadedBy: Cast to ObjectId failed for value "undefined" (type string) at path "uploadedBy" because of "BSONError"	POST	http://localhost:3000
+17-05-23	10:05:50	772ab7c3-b57b-4665-b1a7-e5639d45b735	SyntaxError: Unexpected end of JSON input	DELETE	undefined
+17-05-23	13:09:05	1277f6ba-8b08-493d-88ac-28cbcfb8a71d	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	13:12:01	fae9eaa5-3829-45db-ada2-41917ca5910b	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	13:12:25	96f807ee-d466-4c93-9598-ddfb96b88277	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	13:28:05	6deb4af4-4447-4d76-987a-611460320c3b	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	13:32:57	12ee7992-bc29-436c-ac0f-67152ab52c2b	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	13:36:04	4bd517b6-4820-48dd-ad00-c3cb34105c98	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	13:37:39	cdfeda2e-3215-4d66-bd1d-bb14b1e40fd3	Error: Cannot set headers after they are sent to the client	POST	http://localhost:3000
+17-05-23	14:04:58	dbe9d859-05a5-4c3b-90b1-691528c57f76	ReferenceError: cookies is not defined	POST	http://localhost:3000
+17-05-23	14:35:09	1be7d4cb-f96a-4073-8869-d13a6fc3387d	SyntaxError: Unexpected token n in JSON at position 0	POST	http://localhost:3000
+17-05-23	15:06:46	039c92db-da5f-4f24-b57d-4fbee6901c96	SyntaxError: Unexpected token n in JSON at position 0	POST	http://localhost:3000
+17-05-23	15:20:06	c100b9df-f6ce-4c57-9ad5-7a49097a66f8	SyntaxError: Unexpected token n in JSON at position 0	POST	http://localhost:3000
+21-05-23	17:53:33	8273afa3-ae33-4bf5-a108-5e887911f346	SyntaxError: Unexpected token n in JSON at position 0	POST	http://localhost:3000
+21-05-23	21:06:00	93831607-2084-4c21-9dfb-5c8e0e02b050	TypeError: path must be absolute or specify root to res.sendFile	POST	http://localhost:3000
+21-05-23	21:06:00	4815a3d4-38a7-4348-9590-54137eb6e12a	TypeError: path must be absolute or specify root to res.sendFile	POST	http://localhost:3000
+21-05-23	21:07:47	a6945a88-c38e-455c-b5cc-a5d028b7a471	TypeError: path is not a function	POST	http://localhost:3000
+21-05-23	21:07:47	f148c37f-9c75-4bb5-9559-97a63e4a7137	TypeError: path is not a function	POST	http://localhost:3000
+22-05-23	00:20:46	83b73d2c-ed5f-4b5b-86b7-8dcff3b5502d	MongoPoolClearedError: Connection pool for ac-b22fm91-shard-00-02.3lfgqkn.mongodb.net:27017 was cleared because another operation failed with: "connection <monitor> to 13.127.231.212:27017 timed out"	GET	http://localhost:3000
+22-05-23	00:21:16	ff34c1fb-7128-4610-b587-1e90f3d0bbfb	MongoServerSelectionError: connection <monitor> to 13.233.5.254:27017 timed out	GET	http://localhost:3000
+22-05-23	00:21:16	dae342b3-8dce-4169-8dc1-55280e6983ac	MongoServerSelectionError: connection <monitor> to 13.233.5.254:27017 timed out	POST	http://localhost:3000
+22-05-23	00:21:16	6e3126ab-604a-4fc1-9e3e-b7d38ff60622	MongoServerSelectionError: connection <monitor> to 13.233.5.254:27017 timed out	POST	http://localhost:3000
+22-05-23	00:21:25	22fc0e11-e9d2-4110-92b8-69f6378f06e5	MongoServerSelectionError: connection timed out	POST	http://localhost:3000
+23-05-23	17:22:49	5411c9e0-5b32-4f03-adb1-09e406676b4b	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+23-05-23	17:23:21	aa2d3188-b5db-4c9a-8464-e0e8063460bc	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+23-05-23	17:23:22	ec5f2b86-121c-4771-a495-c7b67f6bab60	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3000
+25-05-23	01:02:54	e1ded823-68f2-4efb-a035-92d864bec861	ValidationError: User validation failed: emailID: Path `emailID` is required.	POST	http://localhost:3000
+25-05-23	01:05:05	d9b6b2e3-fdff-49c8-a1b4-62a8b17b2f48	ValidationError: User validation failed: emailID: Path `emailID` is required.	POST	http://localhost:3000
+25-05-23	01:06:28	ed90fe5a-dc5d-4e18-a0c1-82d1aeeb4640	ValidationError: User validation failed: emailID: Path `emailID` is required.	POST	http://localhost:3000
+25-05-23	01:51:35	52757e42-aef0-4e04-acf0-def8f70d90be	TypeError: user.save is not a function	POST	undefined
+25-05-23	01:53:02	23b6692b-16b7-4a37-99b2-1f32e080d751	TypeError: user.save is not a function	POST	undefined
+25-05-23	01:53:31	3f8ad45f-1e11-441d-8a19-2cb20c8f57aa	TypeError: book.save is not a function	POST	undefined
+25-05-23	01:59:53	c8bfa57b-edbe-48ed-8102-bd8c1b186d4f	TypeError: Cannot read properties of null (reading 'emailId')	POST	undefined
+25-05-23	02:00:43	5e17e610-6085-4f19-b2c1-517e75096d22	TypeError: Cannot read properties of null (reading 'emailId')	POST	undefined
+25-05-23	02:02:00	ab6d140c-bb96-4589-a6c4-d0abc841589b	TypeError: Cannot read properties of null (reading 'emailId')	POST	undefined
+25-05-23	02:03:16	97693ae3-7f67-4889-8052-a54bc9569375	TypeError: Cannot read properties of null (reading 'emailId')	POST	undefined
+25-05-23	02:21:10	da886bd8-824a-4a77-866d-978cafa23576	TypeError: user.save is not a function	POST	undefined
+25-05-23	02:22:33	e6d468cc-4073-476d-aa73-93ad5cd039ce	TypeError: user.save is not a function	POST	undefined
+25-05-23	12:29:07	6976dd92-58ad-45cb-a1fe-edd789655345	MongoServerSelectionError: getaddrinfo EAI_AGAIN ac-b22fm91-shard-00-00.3lfgqkn.mongodb.net	GET	http://localhost:3000
+25-05-23	12:29:27	9365382e-1549-4712-a621-eca5b5b95065	MongoServerSelectionError: getaddrinfo EAI_AGAIN ac-b22fm91-shard-00-00.3lfgqkn.mongodb.net	GET	http://localhost:3000
+25-05-23	13:23:43	85c3365e-e08f-4330-bff7-c5ed8db5fc1a	TypeError: Cannot read properties of null (reading 'emailID')	POST	http://localhost:3000
