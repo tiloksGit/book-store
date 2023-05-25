@@ -1,0 +1,9 @@
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+}

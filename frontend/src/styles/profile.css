@@ -1,0 +1,36 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex-grow: 1;
+}
+
+.uploads-container {
+  font-size: 3rem;
+}
+
+.uploads-container li {
+  color: violet;
+}
+
+.delete-user-btn-container {
+  margin-top: 20px;
+}
+
+.delete-user-btn-container button {
+  margin-left: 0;
+}
+
+.myUploads img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sales-btn-container {
+  margin-top: 20px;
+}
+
+.sales-btn-container button {
+  margin-left: 0;
+}

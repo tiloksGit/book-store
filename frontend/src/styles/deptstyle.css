@@ -1,0 +1,23 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page h4 {
+  padding: 20px;
+}
+
+.book-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.book-container > * {
+  flex-basis: 40%;
+}

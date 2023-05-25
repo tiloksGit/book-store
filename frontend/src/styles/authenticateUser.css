@@ -1,0 +1,59 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  padding: 10px 8px;
+  border-radius: 5px;
+}
+
+.auth-form-parent form {
+  padding-inline: 10px;
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-form-parent form input {
+  padding: 8px 5px;
+}
+
+.login-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: rgb(40, 108, 255);
+  color: white;
+  cursor: pointer;
+}
+
+.signup-btn {
+  margin-top: 20px;
+  margin-inline: auto;
+}
+
+.signup-btn button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: rgb(40, 108, 255);
+  color: white;
+  cursor: pointer;
+}
+.layout {
+  /* margin-top: 80px;   */
+  height: 100vh;
+  /* width: 100%; */
+  /* display: flex; */
+  padding: 20px;
+  /* flex-grow: 1 */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+  margin-left: 300px; /* Set the margin to the width of the Sidebar */
+  margin-right: 300px; /* Set the margin to the width of the AuthenticateUser */
+}
