@@ -25,7 +25,7 @@ const Profile = () => {
     };
     console.log(userName);
     const response = await apiResponse(
-      "https://mini-project-backend-4ylv.onrender.com/users",
+      "https://bookstore-backend-kt7c.onrender.com/users",
       options
     );
     if (response.ok) {
@@ -39,7 +39,7 @@ const Profile = () => {
   const handeleRemove = async (book) => {
     try {
       const userResponse = await fetch(
-        "https://mini-project-backend-4ylv.onrender.com/books",
+        "https://bookstore-backend-kt7c.onrender.com/books",
         {
           method: "DELETE",
           headers: {
@@ -62,7 +62,7 @@ const Profile = () => {
   //   const getUserDetails = async () => {
   //     try {
   //       const userResponse = await fetch(
-  //         "https://mini-project-backend-4ylv.onrender.com/users/profile",
+  //         "https://bookstore-backend-kt7c.onrender.com/users/profile",
   //         {
   //           method: "POST",
   //           headers: {

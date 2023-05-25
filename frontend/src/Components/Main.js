@@ -11,7 +11,7 @@ const Main = () => {
     const getContent = async () => {
       try {
         const response = await fetch(
-          "https://mini-project-backend-4ylv.onrender.com/",
+          "https://bookstore-backend-kt7c.onrender.com/",
           {
             method: "GET",
             headers: {
@@ -36,7 +36,7 @@ const Main = () => {
     const getUserDetails = async () => {
       try {
         const userResponse = await fetch(
-          "https://mini-project-backend-4ylv.onrender.com/users/profile",
+          "https://bookstore-backend-kt7c.onrender.com/users/profile",
           {
             method: "POST",
             headers: {

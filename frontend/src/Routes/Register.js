@@ -34,7 +34,7 @@ const Register = () => {
 
       try {
         const response = await fetch(
-          "https://mini-project-backend-4ylv.onrender.com/register/",
+          "https://bookstore-backend-kt7c.onrender.com/register/",
           {
             method: "POST",
             body: formData,

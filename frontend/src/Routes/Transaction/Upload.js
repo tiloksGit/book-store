@@ -24,7 +24,7 @@ const Upload = () => {
 
     try {
       const validUser = await fetch(
-        "https://mini-project-backend-4ylv.onrender.com/users/profile",
+        "https://bookstore-backend-kt7c.onrender.com/users/profile",
         {
           method: "POST",
           headers: {
@@ -43,7 +43,7 @@ const Upload = () => {
         formData.append("expecPrice", expecPrice);
         formData.append("img", img);
         const response = await fetch(
-          "https://mini-project-backend-4ylv.onrender.com/books",
+          "https://bookstore-backend-kt7c.onrender.com/books",
           {
             method: "POST",
             body: formData,

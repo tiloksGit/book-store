@@ -16,7 +16,7 @@ const Buy = ({}) => {
     };
     try {
       const response = await apiResponse(
-        "https://mini-project-backend-4ylv.onrender.com/sendmail",
+        "https://bookstore-backend-kt7c.onrender.com/sendmail",
         options
       );
       if (response) {

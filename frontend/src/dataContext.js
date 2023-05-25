@@ -20,7 +20,7 @@ export const DataProvider = ({ children }) => {
     console.log(123);
     try {
       const response = await fetch(
-        "https://mini-project-backend-4ylv.onrender.com/auth/logout",
+        "https://bookstore-backend-kt7c.onrender.com/auth/logout",
         {
           method: "POST",
           headers: {
@@ -48,7 +48,7 @@ export const DataProvider = ({ children }) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://mini-project-backend-4ylv.onrender.com/auth",
+        "https://bookstore-backend-kt7c.onrender.com/auth",
         {
           method: "POST",
           headers: {
@@ -81,7 +81,7 @@ export const DataProvider = ({ children }) => {
     const getBooks = async () => {
       try {
         const response = await fetch(
-          "https://mini-project-backend-4ylv.onrender.com/books",
+          "https://bookstore-backend-kt7c.onrender.com/books",
           {
             method: "GET",
           }
