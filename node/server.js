@@ -6,7 +6,7 @@ const cors = require("cors");
 const { logger } = require("./middleware/logger");
 const errLogger = require("./middleware/errLogger");
 const cookieParser = require("cookie-parser");
-// const corsOptions = require("./config/corsOptions");
+const corsOptions = require("./config/corsOptions");
 const connectDB = require("./config/dbConn");
 const mongoose = require("mongoose");
 const { logEvents } = require("./middleware/logger");
@@ -20,7 +20,7 @@ app.use(logger);
 
 //cross origin resource sharing
 // app.use(cors({ credentials: true }));
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors(corsOptions));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.urlencoded({ extended: false }));
