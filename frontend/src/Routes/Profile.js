@@ -63,10 +63,9 @@ const Profile = () => {
       const userData = await userResponse.json();
 
       alert(userData.message);
+      setLoadBook("yes");
     } catch (err) {
       alert(err.message);
-    } finally {
-      setLoadBook(loading);
     }
   };
 
@@ -147,7 +146,6 @@ const Profile = () => {
               <img src={book.imgURL} height="200" width="200" />
               <br />
               Book Title : {book.title} <br /> Author : {book.author}
-              {/* <br /> */}
               <div className="sales-btn-container">
                 <button className="btn" onClick={() => handeleRemove(book)}>
                   Remove from sales option

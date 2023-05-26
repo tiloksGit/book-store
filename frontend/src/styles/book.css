@@ -1,5 +1,5 @@
 .book-card {
-  margin: 20px 0 50px;
+  /* margin: 20px 0 50px; */
   padding: 20px;
   width: 80%;
   height: fit-content;
@@ -13,15 +13,7 @@
   justify-content: center;
   background-color: rgba(209, 191, 164, 0.384);
   transition: transform 0.1s ease-in-out;
-  gap: 10px;
-}
-
-.book:hover {
-  transform: scale(1.009);
-}
-.book li {
-  text-decoration: none;
-  list-style-type: none;
+  /* gap: 10px; */
 }
 
 .book button {

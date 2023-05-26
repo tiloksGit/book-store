@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import dataContext from "../../dataContext";
 
 const Upload = () => {
-  const { userName, id, accessToken, FontAwesomeIcon, faSpinner } =
+  const { userName, id, accessToken, FontAwesomeIcon, faSpinner, setLoadBook } =
     useContext(dataContext);
   const [bookname, setBookname] = useState("");
   const [author, setAuthor] = useState("");
@@ -71,6 +71,7 @@ const Upload = () => {
       setBranch("");
       setPasswd("");
       setIsLoading(false);
+      setLoadBook(true);
     }
   };
 

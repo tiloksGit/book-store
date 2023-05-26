@@ -4,7 +4,6 @@ import Main from "./Components/Main";
 import Cse from "./Routes/Cse";
 import Ee from "./Routes/Ee";
 import Ce from "./Routes/Ce";
-import Footer from "./Components/Footer";
 import Ie from "./Routes/Ie";
 import Me from "./Routes/Me";
 import Profile from "./Routes/Profile";
@@ -35,7 +34,6 @@ function App() {
           <Route path="buy" element={<Buy />} />
         </Route>
       </Routes>
-      <Footer />
     </DataProvider>
   );
 }

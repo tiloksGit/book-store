@@ -17,6 +17,7 @@
 .uploads-container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
 }
 
@@ -31,11 +32,17 @@
 .delete-user-btn-container button {
   margin-left: 0;
   margin-bottom: 10px;
+  background-color: aqua;
 }
 .myUploads {
+  display: flex;
+  flex-wrap: wrap;
   width: 30%;
-  padding: 0 8px;
+  padding: 5px 8px;
   margin: 0 10px;
+  border: burlywood solid 1px;
+  border-radius: 10px;
+  justify-content: center;
 }
 .myUploads img {
   border-radius: 8px;
@@ -48,6 +55,7 @@
 
 .sales-btn-container button {
   margin-left: 0;
+  background-color: aqua;
 }
 
 table {

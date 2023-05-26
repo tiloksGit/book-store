@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import "../styles/sidebar.css";
+import "../styles/layout.css";
 const Sidebar = () => {
   return (
-    <div className="NavBody-parent">
+    <div className="sidebar-parent">
       <ul>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "list")}

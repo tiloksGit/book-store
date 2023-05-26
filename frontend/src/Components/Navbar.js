@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import SearchBar from "./SearchBar";
-import "../styles/navbar.css";
+import "../styles/layout.css";
 import { Link } from "react-router-dom";
 import LoginContext from "../dataContext";
 

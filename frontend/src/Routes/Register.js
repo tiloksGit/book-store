@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../styles/register.css";
 import { Link } from "react-router-dom";
+import dataContext from "../dataContext";
 
 const Register = () => {
   const [userName, setUserName] = useState("");
@@ -18,6 +19,7 @@ const Register = () => {
   const options = ["CSE", "EE", "ME", "IE", "CE"];
   const semesterOptions = [1, 2, 3, 4, 5, 6, 7, 8];
   const [loading, setLoading] = useState(false);
+  const { FontAwesomeIcon, faSpinner } = useContext(dataContext);
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -65,6 +67,7 @@ const Register = () => {
         setImg(null);
         setAllOk(false);
         setEmail("");
+        setLoading(false);
       }
     }
   };
@@ -81,7 +84,9 @@ const Register = () => {
 
   return (
     <div className="register-container">
-      {isRegistered ? (
+      {loading ? (
+        <FontAwesomeIcon icon={faSpinner} spin />
+      ) : isRegistered ? (
         <>
           <p>{msg}</p>
           <Link to="/login"> Sign in</Link>
