@@ -3,9 +3,13 @@ import dataContext from "../../dataContext";
 import apiResponse from "../../app/api/apiSlice";
 
 const Buy = ({}) => {
-  const { userName, accessToken, activeSales } = useContext(dataContext);
+  const { userName, accessToken, activeSales, FontAwesomeIcon, faSpinner } =
+    useContext(dataContext);
   const [res, setRes] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const sellBook = async () => {
+    setLoading(true);
     const options = {
       method: "POST",
       headers: {
@@ -24,7 +28,10 @@ const Buy = ({}) => {
         setRes(result.message);
       }
     } catch (err) {
+      setLoading(false);
       alert(`Error: ${err.message}....please reload the page`);
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -41,7 +48,13 @@ const Buy = ({}) => {
           <br />
           Price: {activeSales.expecPrice}
           <br />
-          <button onClick={sellBook}>confirm buy</button>
+          <div className="status">
+            {loading ? (
+              <FontAwesomeIcon icon={faSpinner} spin />
+            ) : (
+              <button onClick={sellBook}>confirm buy</button>
+            )}
+          </div>
         </>
       )}
     </>

@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import dataContext from "../../dataContext";
 
 const Upload = () => {
-  const { userName, id, accessToken } = useContext(dataContext);
+  const { userName, id, accessToken, FontAwesomeIcon, faSpinner } =
+    useContext(dataContext);
   const [bookname, setBookname] = useState("");
   const [author, setAuthor] = useState("");
   const [expecPrice, setExpecPrice] = useState("");
@@ -52,7 +53,6 @@ const Upload = () => {
             },
           }
         );
-        setIsLoading(false);
         const responseData = await response.json();
         if (response) {
           alert(responseData.message);
@@ -61,6 +61,7 @@ const Upload = () => {
         alert(validUser.status);
       }
     } catch (err) {
+      setIsLoading(false);
       alert(err.message);
     } finally {
       setBookname("");
@@ -69,15 +70,16 @@ const Upload = () => {
       setAuthor("");
       setBranch("");
       setPasswd("");
+      setIsLoading(false);
     }
   };
-
-  const load = <>Loading...</>;
 
   return (
     <>
       {isLoading ? (
-        load
+        <div className="loading">
+          <FontAwesomeIcon icon={faSpinner} spin />
+        </div>
       ) : (
         <div className="register-container">
           <form onSubmit={(e) => handleSubmit(e)}>

@@ -3,7 +3,8 @@ import "../styles/authenticateUser.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import dataContext from "../dataContext";
-
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 const AuthenticateUser = () => {
   const {
     passwd,
@@ -14,19 +15,16 @@ const AuthenticateUser = () => {
     setErrMsg,
     name,
     setName,
+    authPending,
+    setAuthPending,
+    FontAwesomeIcon,
+    faSpinner,
   } = useContext(dataContext);
   // const [shouldRedirect, setShouldRedirect] = useState(false);
   const navigate = useNavigate();
 
-  const handleAfterLogin = () => {
-    setErrMsg("");
-    setName("");
-    setPasswd("");
-    setPasswd("");
-  };
-
   useEffect(() => {
-    const delay = 3000;
+    const delay = 500;
     const redirectTimeout = setTimeout(() => {
       if (msg) {
         navigate("/exclusive");
@@ -63,12 +61,16 @@ const AuthenticateUser = () => {
                 onChange={(e) => setPasswd(e.target.value)}
                 value={passwd}
               />
-              <button type="submit" className="login-btn">
-                Login
-              </button>
+              {authPending ? (
+                <FontAwesomeIcon icon={faSpinner} spin />
+              ) : (
+                <button type="submit" className="login-btn">
+                  Login
+                </button>
+              )}
             </form>
           </div>
-          <div className="signup-btn">
+          <div className="login-btn">
             <Link to="/register">Sign Up</Link>
           </div>
         </>

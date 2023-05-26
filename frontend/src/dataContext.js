@@ -1,6 +1,8 @@
 import { createContext } from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const dataContext = createContext({});
 
@@ -15,6 +17,8 @@ export const DataProvider = ({ children }) => {
   const [errMsg, setErrMsg] = useState(null);
   const [user, setUser] = useState([]);
   const [activeSales, setActiveSales] = useState();
+  const [authPending, setAuthPending] = useState();
+  const [loadBook, setLoadBook] = useState();
 
   const handleLogout = async () => {
     console.log(123);
@@ -44,8 +48,16 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+  const handleAfterLogin = () => {
+    setErrMsg("");
+    setName("");
+    setPasswd("");
+    setAuthPending(false);
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
+    setAuthPending(true);
     try {
       const response = await fetch(
         "https://bookstore-backend-kt7c.onrender.com/auth",
@@ -72,6 +84,8 @@ export const DataProvider = ({ children }) => {
       }
     } catch (err) {
       alert("server error please reload the page");
+    } finally {
+      handleAfterLogin();
     }
   };
 
@@ -99,11 +113,12 @@ export const DataProvider = ({ children }) => {
     };
 
     getBooks();
-  }, [name]);
+  }, [loadBook]);
 
   return (
     <dataContext.Provider
       value={{
+        setLoadBook,
         userName,
         name,
         setName,
@@ -122,6 +137,10 @@ export const DataProvider = ({ children }) => {
         setUser,
         setActiveSales,
         activeSales,
+        authPending,
+        setAuthPending,
+        FontAwesomeIcon,
+        faSpinner,
       }}
     >
       {children}

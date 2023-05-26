@@ -16,3 +16,13 @@ body {
   color: white;
   cursor: pointer;
 }
+
+.loading {
+  text-align: center;
+}
+
+.status {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
