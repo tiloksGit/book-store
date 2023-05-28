@@ -6,7 +6,6 @@ const Seller = require("../models/Seller");
 
 const mailHandler = asyncHandler(async (req, res) => {
   const { bookId, username } = req.body;
-  console.log(bookId, username);
   if (!bookId || !username) {
     return res.status(400).json({ message: "all fields are required" });
   }
@@ -21,10 +20,8 @@ const mailHandler = asyncHandler(async (req, res) => {
 
   const book = await Book.findById(bookId).exec();
   const user = await User.findOne({ username }).exec();
-  console.log(user);
 
   const id = book.uploadedBy;
-  console.log(id);
   const seller = await User.findById(book.uploadedBy).lean().exec();
   const options = {
     from: "mini_project_test@outlook.com",

@@ -16,14 +16,12 @@ const logEvents = async (msg, logName) => {
       logItem
     );
   } catch (err) {
-    
     console.log(err);
   }
 };
 
 const logger = (req, res, next) => {
   logEvents(`${req.method}\t${req.url}\t${req.headers.origin}`, "reqlog.log");
-  console.log(`${req.method} ${req.path}`);
   next();
 };
 module.exports = { logEvents, logger };

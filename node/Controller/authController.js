@@ -18,7 +18,7 @@ const handleAuth = asyncHandler(async (req, res) => {
   }
   const match = await bcrypt.compare(password, user.password);
 
-  console.log(match);
+
   if (!match) {
     return res.status(400).json({ message: "Invalid Username or Password" });
   }
@@ -58,11 +58,9 @@ const handleAuth = asyncHandler(async (req, res) => {
 
 const refresh = asyncHandler(async (req, res) => {
   const cookies = req.headers.token;
-  console.log(cookies);
   if (!cookies?.jwt) return res.status(401).json({ message: "unauthorized" });
 
   const refreshToken = cookies;
-  console.log(refreshToken);
   jwt.verify(
     refreshToken,
     process.env.REFRESH_TOKEN_SECRET,
