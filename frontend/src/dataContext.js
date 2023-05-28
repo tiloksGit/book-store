@@ -115,7 +115,7 @@ export const DataProvider = ({ children }) => {
           alert(data.message);
         }
       } catch (err) {
-        console.log(err);
+        console.log(err); 
       } finally {
         setLoadBook(false);
       }
