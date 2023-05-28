@@ -7,6 +7,7 @@ const allowedOrigin = [
   "postman",
   "https://admirable-sprite-e9d94d.netlify.app",
   "https://book-store-theta-black.vercel.app",
+  "https://book-store-i1z1cu8t3-tiloksgit.vercel.app",
 ];
 
 module.exports = allowedOrigin;
