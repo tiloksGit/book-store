@@ -23,19 +23,6 @@ const AuthenticateUser = () => {
   // const [shouldRedirect, setShouldRedirect] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const delay = 500;
-    const redirectTimeout = setTimeout(() => {
-      if (msg) {
-        navigate("/exclusive");
-      }
-    }, delay);
-
-    return () => {
-      clearTimeout(redirectTimeout);
-    };
-  }, [msg]);
-
   return (
     <div className="layout">
       <div className="auth">
@@ -70,8 +57,11 @@ const AuthenticateUser = () => {
               )}
             </form>
           </div>
-          <div className="login-btn">
-            <Link to="/register">Sign Up</Link>
+          <div className="">
+            Not registered yet ?
+            <Link to="/register" className="signup-btn">
+              Sign Up
+            </Link>
           </div>
         </>
       </div>

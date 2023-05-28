@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import dataContext from "../../dataContext";
+import "../../styles/forms.css";
 
 const Upload = () => {
   const { userName, id, accessToken, FontAwesomeIcon, faSpinner, setLoadBook } =
@@ -76,84 +77,80 @@ const Upload = () => {
   };
 
   return (
-    <>
+    <div className="form-container">
       {isLoading ? (
         <div className="loading">
           <FontAwesomeIcon icon={faSpinner} spin />
         </div>
       ) : (
-        <div className="register-container">
-          <form onSubmit={(e) => handleSubmit(e)}>
-            <label htmlFor="name">Title of the Book : </label>
-            <input
-              type="text"
-              placeholder="Book name"
-              id="name"
-              required
-              name="name"
-              value={bookname}
-              onChange={(e) => setBookname(e.target.value)}
-            />
-            <label htmlFor="author">Author of the book : </label>
-            <input
-              type="text"
-              placeholder="Author"
-              id="author"
-              required
-              name="author"
-              value={author}
-              onChange={(e) => setAuthor(e.target.value)}
-            />
-            <label htmlFor="branch">Branch :</label>
-            <input
-              list="options"
-              placeholder="Branch"
-              required
-              id="branch"
-              onSelect={(e) => setBranch(e.target.value)}
-            />
-            <datalist id="options">
-              {options.map((option) => (
-                <option key={option} value={option} />
-              ))}
-            </datalist>
-            <label htmlFor="img">Upload cover page of the book:</label>
-            <input
-              className="img-upload"
-              type="file"
-              required
-              id="img"
-              onChange={(e) => {
-                setImg(e.target.files[0]);
-              }}
-            />
-            <label htmlFor="price">set Price for the book : </label>
-            <input
-              type="text"
-              placeholder="in Rs."
-              id="price"
-              required
-              name="price"
-              value={expecPrice}
-              onChange={(e) => setExpecPrice(e.target.value)}
-            />
-            <label htmlFor="password">
-              Confirm your email :{err ? err : ""}
-            </label>
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              id="password"
-              onChange={(e) => setPasswd(e.target.value)}
-            />
-            <button className="submit-btn" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <label htmlFor="name">Title of the Book : </label>
+          <input
+            type="text"
+            placeholder="Book name"
+            id="name"
+            required
+            name="name"
+            value={bookname}
+            onChange={(e) => setBookname(e.target.value)}
+          />
+          <label htmlFor="author">Author of the book : </label>
+          <input
+            type="text"
+            placeholder="Author"
+            id="author"
+            required
+            name="author"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+          />
+          <label htmlFor="branch">Branch :</label>
+          <input
+            list="options"
+            placeholder="Branch"
+            required
+            id="branch"
+            onSelect={(e) => setBranch(e.target.value)}
+          />
+          <datalist id="options">
+            {options.map((option) => (
+              <option key={option} value={option} />
+            ))}
+          </datalist>
+          <label htmlFor="img">Upload cover page of the book:</label>
+          <input
+            className="img-upload"
+            type="file"
+            required
+            id="img"
+            onChange={(e) => {
+              setImg(e.target.files[0]);
+            }}
+          />
+          <label htmlFor="price">Set Price for the book : </label>
+          <input
+            type="text"
+            placeholder="in Rs."
+            id="price"
+            required
+            name="price"
+            value={expecPrice}
+            onChange={(e) => setExpecPrice(e.target.value)}
+          />
+          <label htmlFor="password">Confirm your email :{err ? err : ""}</label>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            id="password"
+            onChange={(e) => setPasswd(e.target.value)}
+          />
+          <button className="submit-btn" type="submit">
+            Submit
+          </button>
+        </form>
       )}
-    </>
+    </div>
   );
 };
 

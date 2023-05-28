@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import "../styles/register.css";
+import "../styles/forms.css";
 import { Link } from "react-router-dom";
 import dataContext from "../dataContext";
 
@@ -32,7 +32,6 @@ const Register = () => {
       formData.append("semester", semester);
       formData.append("emailID", email);
       if (img) formData.append("img", img);
-      console.log(formData);
 
       try {
         const response = await fetch(
@@ -83,7 +82,7 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
+    <div className="form-container">
       {loading ? (
         <FontAwesomeIcon icon={faSpinner} spin />
       ) : isRegistered ? (

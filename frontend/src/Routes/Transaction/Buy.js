@@ -35,12 +35,17 @@ const Buy = ({}) => {
     }
   };
   return (
-    <>
+    <div className="uploads-container">
       {res ? (
         <div>{res}</div>
       ) : (
-        <>
-          <img src={activeSales.imgURL} alt={activeSales.title} />
+        <div className="myUploads">
+          <img
+            src={activeSales.imgURL}
+            alt={activeSales.title}
+            height="200"
+            width="200"
+          />
           <br />
           Book Title: {activeSales.title}
           <br />
@@ -48,16 +53,16 @@ const Buy = ({}) => {
           <br />
           Price: {activeSales.expecPrice}
           <br />
-          <div className="status">
+          <div className="sales-btn-container">
             {loading ? (
               <FontAwesomeIcon icon={faSpinner} spin />
             ) : (
               <button onClick={sellBook}>confirm buy</button>
             )}
           </div>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 };
 

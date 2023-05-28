@@ -1,4 +1,4 @@
-.register-container {
+.form-container {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -19,6 +19,7 @@ form {
 }
 
 form label {
+  text-align: left;
   margin-top: 20px;
 }
 

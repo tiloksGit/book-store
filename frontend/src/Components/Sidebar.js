@@ -44,7 +44,7 @@ const Sidebar = () => {
           className={({ isActive }) => (isActive ? "active" : "list")}
           to="/exclusive/upload/new-book"
         >
-          upload book to sell
+          Upload book to sell
         </NavLink>
       </ul>
     </div>

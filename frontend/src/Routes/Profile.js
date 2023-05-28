@@ -31,7 +31,7 @@ const Profile = () => {
       },
       body: JSON.stringify({ username: userName }),
     };
-    console.log(userName);
+  
     const response = await apiResponse(
       "https://bookstore-backend-kt7c.onrender.com/users",
       options
@@ -69,35 +69,6 @@ const Profile = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const getUserDetails = async () => {
-  //     try {
-  //       const userResponse = await fetch(
-  //         "https://bookstore-backend-kt7c.onrender.com/users/profile",
-  //         {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             Authorization: `Bearer ${accessToken}`,
-  //           },
-  //           body: JSON.stringify({ username: userName }),
-  //         }
-  //       );
-
-  //       const userData = await userResponse.json();
-
-  //       if (userResponse.status === 200) {
-  //         setUser(userData);
-  //       } else {
-  //         alert(userData.message);
-  //       }
-  //     } catch (err) {
-  //       alert(err.message);
-  //     }
-  //   };
-  //   getUserDetails();
-  // }, [accessToken]);
-
   useEffect(() => {
     if (books?.length) {
       const newBook = books.filter((book) => book.uploadedBy === id);
@@ -116,20 +87,24 @@ const Profile = () => {
         <p>BooksBought: {user.booksCount}</p>
         <p>Email id: {user.emailID}</p>
         My transactions: <br />
-        <table>
-          <tr>
-            <th>Slno.</th>
-            <th>Book Id</th>
-          </tr>
-          {user.booksBought?.length
-            ? user.booksBought.map((user, i) => (
-                <tr key={i}>
-                  <td width="30%">{`${i + 1}`}</td>
-                  <td>{user.bookId} </td>
-                </tr>
-              ))
-            : ""}
-        </table>
+        {user.booksBought?.length ? (
+          <table>
+            <tr>
+              <th>Slno.</th>
+              <th>Book Id</th>
+            </tr>
+            {user.booksBought?.length
+              ? user.booksBought.map((user, i) => (
+                  <tr key={i}>
+                    <td width="30%">{`${i + 1}`}</td>
+                    <td>{user.bookId} </td>
+                  </tr>
+                ))
+              : ""}
+          </table>
+        ) : (
+          "You have no Transanctions"
+        )}
       </div>
       <h3>My uploads</h3>
       <div className="delete-user-btn-container">

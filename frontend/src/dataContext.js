@@ -21,7 +21,6 @@ export const DataProvider = ({ children }) => {
   const [loadBook, setLoadBook] = useState();
 
   const handleLogout = async () => {
-    console.log(123);
     try {
       const response = await fetch(
         "https://bookstore-backend-kt7c.onrender.com/auth/logout",
@@ -49,7 +48,6 @@ export const DataProvider = ({ children }) => {
   };
 
   const handleAfterLogin = () => {
-    setErrMsg("");
     setName("");
     setPasswd("");
     setAuthPending(false);
@@ -77,6 +75,15 @@ export const DataProvider = ({ children }) => {
         localStorage.setItem("id", responseData.id);
         setName("");
         setMsg("Login succesful \n Redirecting to the home page...");
+        const delay = 500;
+        const redirectTimeout = setTimeout(() => {
+          navigate("/exclusive");
+          setMsg("");
+          setErrMsg("");
+        }, delay);
+        return () => {
+          clearTimeout(redirectTimeout);
+        };
       } else {
         setErrMsg(
           `Recieved status :${response.status} from the server with the message "${responseData.message}"`
