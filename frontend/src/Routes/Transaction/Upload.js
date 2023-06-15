@@ -71,13 +71,13 @@ const Upload = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container fade">
       {isLoading ? (
         <div className="loading">
           <FontAwesomeIcon icon={faSpinner} spin />
         </div>
       ) : (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)} className="fade">
           <label htmlFor="name">Title of the Book : </label>
           <input
             type="text"
