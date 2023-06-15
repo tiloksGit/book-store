@@ -123,3 +123,4 @@
 25-05-23	12:29:07	6976dd92-58ad-45cb-a1fe-edd789655345	MongoServerSelectionError: getaddrinfo EAI_AGAIN ac-b22fm91-shard-00-00.3lfgqkn.mongodb.net	GET	http://localhost:3000
 25-05-23	12:29:27	9365382e-1549-4712-a621-eca5b5b95065	MongoServerSelectionError: getaddrinfo EAI_AGAIN ac-b22fm91-shard-00-00.3lfgqkn.mongodb.net	GET	http://localhost:3000
 25-05-23	13:23:43	85c3365e-e08f-4330-bff7-c5ed8db5fc1a	TypeError: Cannot read properties of null (reading 'emailID')	POST	http://localhost:3000
+02-06-23	22:18:27	6902e7f8-ab3b-4f54-a3aa-0622f52fa078	ReferenceError: username is not defined	POST	http://localhost:3000

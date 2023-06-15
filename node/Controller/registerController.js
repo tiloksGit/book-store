@@ -13,7 +13,7 @@ const createNewUser = asyncHandler(async (req, res) => {
   }
   //check for duplicates
 
-  const duplicate = await User.findOne({ username }).lean().exec();
+  const duplicate = await User.findOne({emailID }).lean().exec();
   if (duplicate) {
     return res.status(409).json({ message: "Duplicate found" });
   }

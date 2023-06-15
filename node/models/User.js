@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema(
     emailID: {
       type: String,
       required: true,
+      unique: true
     },
     branch: {
       type: String,

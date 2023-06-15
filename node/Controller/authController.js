@@ -4,14 +4,14 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 
 const handleAuth = asyncHandler(async (req, res) => {
-  const { username, password } = req.body;
+  const {emailID, password } = req.body;
 
   //confirm data
-  if (!username || !password) {
+  if (!emailID || !password) {
     return res.status(400).json({ message: " All fields are required" });
   }
 
-  const user = await User.findOne({ username }).select("+password").lean();
+  const user = await User.findOne({ emailID }).select("+password").lean();
 
   if (!user) {
     return res.status(400).json({ message: "No user found" });
