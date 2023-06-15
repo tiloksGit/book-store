@@ -15,10 +15,13 @@ const Layout = () => {
     <>
       <div className="App-parent">
         <Navbar />
+        <div>
+          <Sidebar />
+        </div>
         <div className="App">
-          <div>
+          {/* <div>
             <Sidebar />
-          </div>
+          </div> */}
           <main className="layout-main-section">
             <Outlet />
           </main>

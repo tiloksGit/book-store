@@ -23,6 +23,17 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     setLoading(true);
+    console.log(!(semester in semesterOptions));
+    console.log(!options.filter((option) => branch === option).length);
+
+    if (
+      !(semester in semesterOptions) ||
+      !options.filter((option) => branch === option).length
+    ) {
+      setLoading(false);
+      alert("please select from the options provided");
+      return;
+    }
     e.preventDefault();
     if (allOk) {
       const formData = new FormData();
@@ -34,13 +45,10 @@ const Register = () => {
       if (img) formData.append("img", img);
 
       try {
-        const response = await fetch(
-          "https://bookstore-backend-kt7c.onrender.com/register/",
-          {
-            method: "POST",
-            body: formData,
-          }
-        );
+        const response = await fetch("http://localhost:4000/register/", {
+          method: "POST",
+          body: formData,
+        });
 
         const responseData = await response.json();
 
@@ -82,102 +90,104 @@ const Register = () => {
   };
 
   return (
-    <div className="form-container">
+    <>
       {loading ? (
         <FontAwesomeIcon icon={faSpinner} spin />
       ) : isRegistered ? (
-        <>
+        <div className="register-complete">
           <p>{msg}</p>
           <Link to="/login"> Sign in</Link>
-        </>
+        </div>
       ) : (
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <label htmlFor="name">Username : </label>
-          <input
-            type="text"
-            placeholder="name"
-            id="name"
-            required
-            name="name"
-            onChange={(e) => setUserName(e.target.value)}
-            value={userName}
-          />
-          <label htmlFor="branch">Branch :</label>
-          <input
-            list="options"
-            placeholder="Branch"
-            required
-            id="branch"
-            onChange={(e) => {
-              setBranch(e.target.value);
-            }}
-          />
-          <datalist id="options">
-            {options.map((option) => (
-              <option key={option} value={option} />
-            ))}
-          </datalist>
-          <label htmlFor="semester">Semester :</label>
-          <input
-            list="semes"
-            id="semester"
-            name="semester"
-            required
-            placeholder="Semester"
-            onChange={(e) => {
-              setSemester(e.target.value);
-            }}
-          />
-          <datalist id="semes">
-            {semesterOptions.map((sem) => (
-              <option key={sem} value={sem} />
-            ))}
-          </datalist>
-          <label htmlFor="img">Upload your avatar :</label>
-          <input
-            className="img-upload"
-            type="file"
-            id="img"
-            onChange={(e) => {
-              setImg(e.target.files[0]);
-            }}
-          />
-          <label htmlFor="email">Email :</label>
-          <input
-            type="email"
-            required
-            id="email"
-            placeholder="email@example.com"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-          />
-          <label htmlFor="password">Password :</label>
-          <input
-            type="text"
-            placeholder="Password"
-            required
-            id="password"
-            value={passwd}
-            onChange={(e) => setPasswd(e.target.value)}
-          />
-          <label htmlFor="cnf-passwd">
-            Confirm password : {passwdErr ? passwdErr : ""}
-          </label>
-          <input
-            type="password"
-            required
-            placeholder="Password"
-            value={cnfPasswd}
-            id="cnf-passwd"
-            onChange={(e) => {
-              handlePasswd(e);
-              setCnfPasswd(e.target.value);
-            }}
-          />
-          <button className="submit-btn"> Submit </button>
-        </form>
+        <div className="form-container">
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <label htmlFor="name">Username : </label>
+            <input
+              type="text"
+              placeholder="name"
+              id="name"
+              required
+              name="name"
+              onChange={(e) => setUserName(e.target.value)}
+              value={userName}
+            />
+            <label htmlFor="branch">Branch :</label>
+            <input
+              list="options"
+              placeholder="Branch"
+              required
+              id="branch"
+              onChange={(e) => {
+                setBranch(e.target.value);
+              }}
+            />
+            <datalist id="options">
+              {options.map((option) => (
+                <option key={option} value={option} />
+              ))}
+            </datalist>
+            <label htmlFor="semester">Semester :</label>
+            <input
+              list="semes"
+              id="semester"
+              name="semester"
+              required
+              placeholder="Semester"
+              onChange={(e) => {
+                setSemester(e.target.value);
+              }}
+            />
+            <datalist id="semes">
+              {semesterOptions.map((sem) => (
+                <option key={sem} value={sem} />
+              ))}
+            </datalist>
+            <label htmlFor="img">Upload your avatar :</label>
+            <input
+              className="img-upload"
+              type="file"
+              id="img"
+              onChange={(e) => {
+                setImg(e.target.files[0]);
+              }}
+            />
+            <label htmlFor="email">Email :</label>
+            <input
+              type="email"
+              required
+              id="email"
+              placeholder="email@example.com"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+            <label htmlFor="password">Password :</label>
+            <input
+              type="text"
+              placeholder="Password"
+              required
+              id="password"
+              value={passwd}
+              onChange={(e) => setPasswd(e.target.value)}
+            />
+            <label htmlFor="cnf-passwd">
+              Confirm password : {passwdErr ? passwdErr : ""}
+            </label>
+            <input
+              type="password"
+              required
+              placeholder="Password"
+              value={cnfPasswd}
+              id="cnf-passwd"
+              onChange={(e) => {
+                handlePasswd(e);
+                setCnfPasswd(e.target.value);
+              }}
+            />
+            <button className="submit-btn"> Submit </button>
+          </form>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

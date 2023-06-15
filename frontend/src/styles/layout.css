@@ -21,7 +21,7 @@ nav {
   display: flex;
   top: 0;
   height: 120px;
-  background: #a0d2eb;
+  background: #d9ed92;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -47,7 +47,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0px;
+  margin-right: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.6s ease;
 }
 
 .profile p {
@@ -62,19 +65,27 @@ nav {
   border-radius: 25px;
 }
 
+.profile:hover {
+  background-color: #52b788;
+}
 .logout-btn {
   padding: 8px 12px;
   border-radius: 5px;
   /* border-style: none; */
-  background: rgb(40, 108, 255);
+  background: #1e6091;
   color: white;
   cursor: pointer;
 }
 /* main css */
 .layout-main-section {
   /* margin-top: 80px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
+  background-color: #99d98c;
   text-align: center;
   padding: 20px;
   overflow: auto;
@@ -85,6 +96,7 @@ nav {
   padding: 22px 12px;
   width: 400px;
   display: flex;
+  background-color: #76c893;
   flex-direction: column;
 }
 
@@ -95,46 +107,48 @@ nav {
 
 /*Sidebar css*/
 .sidebar-parent {
-  width: 350px;
+  /* width: 350px; */
   display: flex;
-  height: 100vh;
-  flex-direction: column;
+  padding-left: 20px;
+  /* height: 100vh; */
+  flex-direction: row;
   align-items: center;
-  background-color: #a0d2eb;
+  background-color: #b5e48c;
 }
 
 .sidebar-parent ul {
   margin-top: 20px;
   margin-right: 20px;
-  width: 100%;
+  padding-bottom: 8px;
+  justify-content: space-around;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  /* flex-direction: column; */
   gap: 15px;
 }
 
 .list {
   text-decoration: none;
   list-style-type: none;
-  width: 100%;
+  width: 360px;
   padding: 20px 30px;
-  background-color: aliceblue;
+  background-color: aquamarine;
+  ;
   border-radius: 10px;
-  transition: transform 0.2s ease-in-out;
+  transition: background-color 0.6s ease-in-out;
 }
 
 .list:hover {
-  background-color: aquamarine;
+  background-color: #52b788;
 
-  transition: 0.2s;
   cursor: pointer;
-  transform: scale(1.02);
 }
 
 .active {
-  background-color: aquamarine;
+  background-color: #52b788;
   text-decoration: none;
   list-style-type: none;
+  width: 360px;
   padding: 20px 30px 20px;
   border-radius: 10px;
-  transition: transform 0.2s ease-in-out;
 }

@@ -6,10 +6,10 @@
 
 body {
   font-family: sans-serif;
-  background-color: #49c5b6;
+  /* background-color: #49c5b6; */
 }
 
-.btn {
+.spn-btn {
   margin-left: 20px;
   padding: 8px 12px;
   border-radius: 5px;
@@ -32,4 +32,57 @@ body {
 a:-webkit-any-link {
   text-decoration: none;
   color: rgb(56, 56, 56);
+}
+
+.carousel-parent {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90vh;
+  margin: 1rem;
+  align-items: center;
+}
+
+.carousel-parent img {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.9;
+  animation: fade 10s infinte;
+  transition: animation 1s ease;
+}
+
+.carousel-button {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+
+.carousel-button .spn-btn {
+  width: 200px;
+  max-height: 2px;
+  cursor: pointer;
+  margin-right: 0.3rem;
+  text-align: center;
+  background-color: #1e6091;
+  border-radius: 5px;
+  transition: background-color 0.6s ease;
+  opacity: 0.5;
+}
+
+.carousel-button .spn-btn:hover {
+  background-color: #52b788;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
 }

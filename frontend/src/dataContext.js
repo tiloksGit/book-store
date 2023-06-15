@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -18,20 +18,17 @@ export const DataProvider = ({ children }) => {
   const [user, setUser] = useState([]);
   const [activeSales, setActiveSales] = useState();
   const [authPending, setAuthPending] = useState();
-  const [loadBook, setLoadBook] = useState();
+  const [loadBook, setLoadBook] = useState(false);
 
   const handleLogout = async () => {
     try {
-      const response = await fetch(
-        "https://bookstore-backend-kt7c.onrender.com/auth/logout",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            token: localStorage.getItem("jwt"),
-          },
-        }
-      );
+      const response = await fetch("http://localhost:4000/auth/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("jwt"),
+        },
+      });
       const responseData = await response.json();
       // console.log(responseData.message);
       if (responseData) {
@@ -57,16 +54,13 @@ export const DataProvider = ({ children }) => {
     e.preventDefault();
     setAuthPending(true);
     try {
-      const response = await fetch(
-        "https://bookstore-backend-kt7c.onrender.com/auth",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ username: name, password: passwd }),
-        }
-      );
+      const response = await fetch("http://localhost:4000/auth", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ emailID: name, password: passwd }),
+      });
 
       const responseData = await response.json();
       if (response.status === 200) {
@@ -76,6 +70,7 @@ export const DataProvider = ({ children }) => {
         setName("");
         setMsg("Login succesful \n Redirecting to the home page...");
         const delay = 500;
+        setLoadBook(true);
         const redirectTimeout = setTimeout(() => {
           navigate("/exclusive");
           setMsg("");
@@ -98,31 +93,28 @@ export const DataProvider = ({ children }) => {
 
   const [books, setBooks] = useState("");
 
-  useEffect(() => {
-    const getBooks = async () => {
-      try {
-        const response = await fetch(
-          "https://bookstore-backend-kt7c.onrender.com/books",
-          {
-            method: "GET",
-          }
-        );
+  const getBooks = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/books", {
+        method: "GET",
+      });
 
-        const data = await response.json();
-        if (response.status === 200) {
-          setBooks(data.books);
-        } else {
-          alert(data.message);
-        }
-      } catch (err) {
-        console.log(err); 
-      } finally {
-        setLoadBook(false);
+      const data = await response.json();
+      if (response.status === 200) {
+        setBooks(data.books);
+      } else {
+        console.log(data.message);
       }
-    };
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoadBook(false);
+    }
+  };
 
+  if (loadBook) {
     getBooks();
-  }, [loadBook]);
+  }
 
   return (
     <dataContext.Provider

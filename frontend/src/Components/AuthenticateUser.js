@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import "../styles/authenticateUser.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import dataContext from "../dataContext";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,16 +12,14 @@ const AuthenticateUser = () => {
     handleLogin,
     msg,
     errMsg,
-    setErrMsg,
     name,
     setName,
     authPending,
-    setAuthPending,
     FontAwesomeIcon,
     faSpinner,
   } = useContext(dataContext);
   // const [shouldRedirect, setShouldRedirect] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div className="layout">
@@ -30,11 +28,11 @@ const AuthenticateUser = () => {
         <>
           <div className="auth-form-parent">
             <form className="authUser" onSubmit={handleLogin}>
-              <label htmlFor="userName">Username : </label>
+              <label htmlFor="email">Email Id : </label>
               <input
-                id="userName"
-                type="text"
-                placeholder="Username"
+                id="email"
+                type="email"
+                placeholder="username"
                 required
                 onChange={(e) => setName(e.target.value)}
                 value={name}

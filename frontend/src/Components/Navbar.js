@@ -17,7 +17,7 @@ const Navbar = () => {
         <SearchBar />
       </div>
       <Link to="profile">
-        <div className="profile">
+        <div className="profile fade">
           <p>{localStorage.getItem("name").charAt(0)}</p>My Profile
         </div>
       </Link>

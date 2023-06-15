@@ -11,7 +11,7 @@ import "../styles/home.css";
 //     const getContent = async () => {
 //       try {
 //         const response = await fetch(
-//           "https://bookstore-backend-kt7c.onrender.com/",
+//           "http://localhost:4000/",
 //           {
 //             method: "GET",
 //             headers: {
@@ -36,7 +36,7 @@ import "../styles/home.css";
 //     const getUserDetails = async () => {
 //       try {
 //         const userResponse = await fetch(
-//           "https://bookstore-backend-kt7c.onrender.com/users/profile",
+//           "http://localhost:4000/users/profile",
 //           {
 //             method: "POST",
 //             headers: {
@@ -77,8 +77,8 @@ import "../styles/home.css";
 
 // export default Main;
 
-import Carousel from "react-bootstrap/Carousel";
-import "bootstrap/dist/css/bootstrap.css";
+// import Carousel from "react-bootstrap/Carousel";
+// import "bootstrap/dist/css/bootstrap.css";
 
 function UncontrolledExample() {
   const { userName, accessToken, setMsg } = useContext(dataContext);
@@ -87,7 +87,7 @@ function UncontrolledExample() {
     const getUserDetails = async () => {
       try {
         const userResponse = await fetch(
-          "https://bookstore-backend-kt7c.onrender.com/users/profile",
+          "http://localhost:4000/users/profile",
           {
             method: "POST",
             headers: {
@@ -113,48 +113,55 @@ function UncontrolledExample() {
     getUserDetails();
   }, [accessToken]);
 
+  const [caption, setCaption] = useState();
+  const [imgURL, setImgUrl] = useState(
+    "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  );
+  const [count, setCount] = useState(0);
+  const images = [
+    "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://imgd.aeplcdn.com/1280x720/n/cw/ec/44686/activa-6g-right-front-three-quarter.jpeg?q=80",
+    "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+    "https://www.befunky.com/images/prismic/1f427434-7ca0-46b2-b5d1-7d31843859b6_funky-focus-red-flower-field-after.jpeg?auto=avif,webp&format=jpg&width=863",
+  ];
+
+  const carouselController = (e) => {
+    // clearTimeout(timeout);
+    console.log(e);
+    setCount(count + 1);
+    setImgUrl(images[e]);
+    if (count === images.length - 1) {
+      setCount(0);
+    }
+  };
+
+  // let timeout = setTimeout(() => carouselController(count), 4000);
+
   return (
     <>
       <p className="log-info">You are Signed in as: {userName}</p>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://c1.wallpaperflare.com/preview/549/799/635/book-shelves-book-wall-bookcase-books.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://c0.wallpaperflare.com/preview/469/70/385/background-book-bookcase-books.jpg"
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://c0.wallpaperflare.com/preview/469/70/385/background-book-bookcase-books.jpg"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <div className="carousel-parent fade">
+        <img src={imgURL} alt="First slide" />
+        <h3>{caption}</h3>
+        <div className="carousel-button">
+          <span
+            className="spn-btn"
+            onClick={() => carouselController(0)}
+          ></span>
+          <span
+            className="spn-btn"
+            onClick={() => carouselController(1)}
+          ></span>
+          <span
+            className="spn-btn"
+            onClick={() => carouselController(2)}
+          ></span>
+          <span
+            className="spn-btn"
+            onClick={() => carouselController(3)}
+          ></span>
+        </div>
+      </div>
     </>
   );
 }

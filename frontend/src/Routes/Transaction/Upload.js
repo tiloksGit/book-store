@@ -25,17 +25,14 @@ const Upload = () => {
     setIsLoading(true);
 
     try {
-      const validUser = await fetch(
-        "https://bookstore-backend-kt7c.onrender.com/users/profile",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${accessToken}`,
-          },
-          body: JSON.stringify({ username: userName }),
-        }
-      );
+      const validUser = await fetch("http://localhost:4000/users/profile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ username: userName }),
+      });
       if (validUser.status === 200) {
         const formData = new FormData();
         formData.append("bookname", bookname);
@@ -44,16 +41,13 @@ const Upload = () => {
         formData.append("branch", branch);
         formData.append("expecPrice", expecPrice);
         formData.append("img", img);
-        const response = await fetch(
-          "https://bookstore-backend-kt7c.onrender.com/books",
-          {
-            method: "POST",
-            body: formData,
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
-          }
-        );
+        const response = await fetch("http://localhost:4000/books", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
         const responseData = await response.json();
         if (response) {
           alert(responseData.message);

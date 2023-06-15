@@ -20,7 +20,7 @@ const Buy = ({}) => {
     };
     try {
       const response = await apiResponse(
-        "https://bookstore-backend-kt7c.onrender.com/sendmail",
+        "http://localhost:4000/sendmail",
         options
       );
       if (response) {
