@@ -11,7 +11,7 @@ import "../styles/home.css";
 //     const getContent = async () => {
 //       try {
 //         const response = await fetch(
-//           "http://localhost:4000/",
+//           "https://bookstore-backend-kt7c.onrender.com/",
 //           {
 //             method: "GET",
 //             headers: {
@@ -36,7 +36,7 @@ import "../styles/home.css";
 //     const getUserDetails = async () => {
 //       try {
 //         const userResponse = await fetch(
-//           "http://localhost:4000/users/profile",
+//           "https://bookstore-backend-kt7c.onrender.com/users/profile",
 //           {
 //             method: "POST",
 //             headers: {
@@ -87,7 +87,7 @@ function UncontrolledExample() {
     const getUserDetails = async () => {
       try {
         const userResponse = await fetch(
-          "http://localhost:4000/users/profile",
+          "https://bookstore-backend-kt7c.onrender.com/users/profile",
           {
             method: "POST",
             headers: {

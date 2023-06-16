@@ -32,7 +32,10 @@ const Profile = () => {
       body: JSON.stringify({ username: userName }),
     };
 
-    const response = await apiResponse("http://localhost:4000/users", options);
+    const response = await apiResponse(
+      "https://bookstore-backend-kt7c.onrender.com/users",
+      options
+    );
     if (response.ok) {
       handleLogout();
       alert("User deleted");
@@ -45,14 +48,17 @@ const Profile = () => {
   const handeleRemove = async (book) => {
     setLoading(true);
     try {
-      const userResponse = await fetch("http://localhost:4000/books", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify({ id: book._id }),
-      });
+      const userResponse = await fetch(
+        "https://bookstore-backend-kt7c.onrender.com/books",
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({ id: book._id }),
+        }
+      );
 
       const userData = await userResponse.json();
 

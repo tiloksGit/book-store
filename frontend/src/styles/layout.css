@@ -101,11 +101,6 @@ nav {
   flex-direction: column;
 }
 
-.right-layout iframe {
-  width: auto;
-  height: 100%;
-}
-
 /*Sidebar css*/
 .sidebar-parent {
   /* width: 350px; */
@@ -141,7 +136,6 @@ nav {
 
 .list:hover {
   background-color: #52b788;
-
   cursor: pointer;
 }
 
@@ -199,5 +193,9 @@ nav {
 
   .sidebar-parent ul {
     flex-direction: row;
+  }
+
+  .right-layout {
+    width: 400px;
   }
 }

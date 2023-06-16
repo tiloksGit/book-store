@@ -22,13 +22,16 @@ export const DataProvider = ({ children }) => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:4000/auth/logout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          token: localStorage.getItem("jwt"),
-        },
-      });
+      const response = await fetch(
+        "https://bookstore-backend-kt7c.onrender.com/auth/logout",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            token: localStorage.getItem("jwt"),
+          },
+        }
+      );
       const responseData = await response.json();
       // console.log(responseData.message);
       if (responseData) {
@@ -54,13 +57,16 @@ export const DataProvider = ({ children }) => {
     e.preventDefault();
     setAuthPending(true);
     try {
-      const response = await fetch("http://localhost:4000/auth", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ emailID: name, password: passwd }),
-      });
+      const response = await fetch(
+        "https://bookstore-backend-kt7c.onrender.com/auth",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ emailID: name, password: passwd }),
+        }
+      );
 
       const responseData = await response.json();
       if (response.status === 200) {
@@ -95,9 +101,12 @@ export const DataProvider = ({ children }) => {
 
   const getBooks = async () => {
     try {
-      const response = await fetch("http://localhost:4000/books", {
-        method: "GET",
-      });
+      const response = await fetch(
+        "https://bookstore-backend-kt7c.onrender.com/books",
+        {
+          method: "GET",
+        }
+      );
 
       const data = await response.json();
       if (response.status === 200) {
@@ -119,9 +128,12 @@ export const DataProvider = ({ children }) => {
   useEffect(
     () => async () => {
       try {
-        const response = await fetch("http://localhost:4000/books", {
-          method: "GET",
-        });
+        const response = await fetch(
+          "https://bookstore-backend-kt7c.onrender.com/books",
+          {
+            method: "GET",
+          }
+        );
 
         const data = await response.json();
         if (response.status === 200) {

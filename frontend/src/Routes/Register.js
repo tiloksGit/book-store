@@ -45,10 +45,13 @@ const Register = () => {
       if (img) formData.append("img", img);
 
       try {
-        const response = await fetch("http://localhost:4000/register/", {
-          method: "POST",
-          body: formData,
-        });
+        const response = await fetch(
+          "https://bookstore-backend-kt7c.onrender.com/register/",
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
 
         const responseData = await response.json();
 
