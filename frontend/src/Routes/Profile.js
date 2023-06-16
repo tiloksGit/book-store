@@ -71,6 +71,7 @@ const Profile = () => {
     setLoading(false);
   }, [books]);
 
+  console.log(myUploads);
   return (
     <div className="profile-container">
       <Avatar avatarName={user.username} avatarURL={user.avatarURL} />
@@ -112,9 +113,10 @@ const Profile = () => {
         <div className="uploads-container">
           {myUploads.map((book) => (
             <div key={book._id} className="myUploads">
-              <img src={book.imgURL} height="200" width="200" />
+              <img src={book.imgURL} />
               <br />
-              Book Title : {book.title} <br /> Author : {book.author}
+              Book Title : {book.title} <br /> Author : {book.author} <br />{" "}
+              Book Ordered : {book.available ? "NO" : "YES"}
               <div className="sales-btn-container">
                 <button className="btn" onClick={() => handeleRemove(book)}>
                   Remove from sales option

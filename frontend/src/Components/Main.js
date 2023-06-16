@@ -125,15 +125,18 @@ function UncontrolledExample() {
     "https://www.befunky.com/images/prismic/1f427434-7ca0-46b2-b5d1-7d31843859b6_funky-focus-red-flower-field-after.jpeg?auto=avif,webp&format=jpg&width=863",
   ];
 
-  const carouselController = (e) => {
-    // clearTimeout(timeout);
-    console.log(e);
-    setCount(count + 1);
+  let timeout;
+  const carouselController = (e = count) => {
+    // setCount(e);
     setImgUrl(images[e]);
+    setCount(e);
     if (count === images.length - 1) {
       setCount(0);
     }
+    // clearInterval(timeout);
   };
+
+  // timeout = setInterval(() => carouselController(count), 4000);
 
   // let timeout = setTimeout(() => carouselController(count), 4000);
 

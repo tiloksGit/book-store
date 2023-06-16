@@ -3,10 +3,18 @@ import dataContext from "../../dataContext";
 import apiResponse from "../../app/api/apiSlice";
 
 const Buy = ({}) => {
-  const { userName, accessToken, activeSales, FontAwesomeIcon, faSpinner } =
-    useContext(dataContext);
+  const {
+    userName,
+    accessToken,
+    activeSales,
+    FontAwesomeIcon,
+    faSpinner,
+    setLoadBook,
+  } = useContext(dataContext);
   const [res, setRes] = useState("");
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState();
+  const [contact, setContact] = useState();
 
   const sellBook = async () => {
     setLoading(true);
@@ -16,7 +24,12 @@ const Buy = ({}) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${accessToken}`,
       },
-      body: JSON.stringify({ username: userName, bookId: activeSales._id }),
+      body: JSON.stringify({
+        username: userName,
+        bookId: activeSales._id,
+        email,
+        contact,
+      }),
     };
     try {
       const response = await apiResponse(
@@ -32,6 +45,7 @@ const Buy = ({}) => {
       alert(`Error: ${err.message}....please reload the page`);
     } finally {
       setLoading(false);
+      setLoadBook(true);
     }
   };
   return (
@@ -53,6 +67,28 @@ const Buy = ({}) => {
           <br />
           Price: {activeSales.expecPrice}
           <br />
+          Book Available: {activeSales.available ? "Yes" : "No"}
+          <br />
+          <form>
+            <label for="contact">Contact Number :</label>
+            <input
+              id="contact"
+              type="number"
+              placeholder="+91 ..."
+              required
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+            />
+            <label for="email">Verify your Email :</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </form>
           <div className="sales-btn-container">
             {loading ? (
               <FontAwesomeIcon icon={faSpinner} spin />

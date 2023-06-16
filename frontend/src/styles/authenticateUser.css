@@ -1,9 +1,10 @@
 .auth {
   display: flex;
+  width: 100%;
   flex-direction: column;
   border: solid;
   padding: 10px 8px;
-  margin: 0px 300px 0px 300px;
+  /* margin: 0px 300px 0px 300px; */
   border-radius: 5px;
   background: #99d98c;
 }
@@ -52,12 +53,11 @@
 
 .layout {
   height: 100vh;
-
   padding: 20px;
-
   flex: 1;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
+  /* width: 100%; */
   background-color: #b5e48c;
+}
+
+@media only screen and (min-width: 400px) {
 }

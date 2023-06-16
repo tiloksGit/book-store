@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -115,6 +115,28 @@ export const DataProvider = ({ children }) => {
   if (loadBook) {
     getBooks();
   }
+
+  useEffect(
+    () => async () => {
+      try {
+        const response = await fetch("http://localhost:4000/books", {
+          method: "GET",
+        });
+
+        const data = await response.json();
+        if (response.status === 200) {
+          setBooks(data.books);
+        } else {
+          console.log(data.message);
+        }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoadBook(false);
+      }
+    },
+    []
+  );
 
   return (
     <dataContext.Provider

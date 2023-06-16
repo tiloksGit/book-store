@@ -84,6 +84,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding-bottom: 20px;
   width: 100%;
   background-color: #99d98c;
   text-align: center;
@@ -151,4 +152,52 @@ nav {
   width: 280px;
   padding: 8px 5px;
   border-radius: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0px;
+  }
+
+  .sidebar-parent ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .layout-main-section {
+    flex: 1;
+  }
+
+  .right-layout {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .App {
+    flex-direction: row;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  .sidebar-parent ul {
+    flex-direction: row;
+  }
 }

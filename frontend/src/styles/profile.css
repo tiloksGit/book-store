@@ -1,6 +1,7 @@
 .profile-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   min-height: 100%;
   flex-grow: 1;
@@ -21,13 +22,15 @@
   width: 100%;
   justify-content: center;
   gap: 20px;
+  padding-bottom: 20px;
 }
 
 .myUploads {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 30%;
+  width: 25%;
+  height: 80%;
   padding: 5px 8px;
   margin: 0 10px;
   border: burlywood solid 1px;
@@ -36,6 +39,8 @@
   align-items: center;
 }
 .myUploads img {
+  height: 60%;
+  width: 90%;
   border-radius: 8px;
   margin-bottom: 0px 20px 0px;
 }
@@ -78,4 +83,18 @@ td {
   border: solid;
   width: 200px;
   text-align: center;
+}
+
+@media only screen and (min-width: 400px) {
+  .uploads-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .uploads-container {
+    flex-direction: row;
+  }
 }

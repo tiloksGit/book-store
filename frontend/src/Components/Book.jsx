@@ -14,9 +14,9 @@ const Book = ({ bookName, author, src, object }) => {
   };
 
   return (
-    <div className="book-card">
+    <div className="book-card fade">
       <div className="img-container">
-        <img src={src} alt={bookName} height="250" width="200" />
+        <img src={src} alt={bookName} height="200" width="200" />
       </div>
       <ul>
         <li>
