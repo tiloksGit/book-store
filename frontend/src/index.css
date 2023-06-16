@@ -71,7 +71,7 @@ a:-webkit-any-link {
   animation-duration: 1.5s;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 500px) {
   .carousel-button .spn-btn {
     width: 10px;
     height: 10px;
