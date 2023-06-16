@@ -85,7 +85,7 @@ td {
   text-align: center;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 100px) {
   .uploads-container {
     flex-direction: column;
     justify-content: center;
@@ -93,7 +93,7 @@ td {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
   .uploads-container {
     flex-direction: row;
   }

@@ -148,11 +148,22 @@ nav {
   border-radius: 10px;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 100px) {
   .App {
     display: flex;
     flex-direction: column;
     flex: 1;
+  }
+
+  .logo img {
+    height: 30px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .profile p {
+    height: 30px;
+    width: 30px;
   }
 
   nav {
@@ -180,9 +191,13 @@ nav {
     align-items: center;
     width: 100%;
   }
+
+  .logout-btn {
+    padding: 3x 5px;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
   .App {
     flex-direction: row;
   }

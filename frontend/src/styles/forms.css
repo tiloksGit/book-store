@@ -53,3 +53,9 @@ form input {
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (min-width: 340px) {
+  form {
+    padding: 0px;
+  }
+}
