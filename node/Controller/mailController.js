@@ -5,7 +5,7 @@ const asyncHandler = require("express-async-handler");
 const Seller = require("../models/Seller");
 
 const mailHandler = asyncHandler(async (req, res) => {
-  const { bookId, username } = req.body;
+  const { bookId, username, contact, email } = req.body;
   if (!bookId || !username) {
     return res.status(400).json({ message: "all fields are required" });
   }
@@ -27,7 +27,7 @@ const mailHandler = asyncHandler(async (req, res) => {
     from: "mini_project_test@outlook.com",
     to: seller.emailID,
     subject: "Book order",
-    text: `You have recieved an order for the book id: ${bookId}, title: ${book.title}\n Name of the Buyer: ${user.username}`,
+    text: `You have recieved an order for the book id: ${bookId}, title: ${book.title}\n Name of the Buyer: ${user.username}\n Contact Number: ${contact}\n Email Id: ${email}`,
   };
 
   if (!book.available) {
