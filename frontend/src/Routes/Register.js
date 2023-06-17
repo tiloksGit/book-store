@@ -93,7 +93,7 @@ const Register = () => {
   };
 
   return (
-    <>
+    <div className="register">
       {loading ? (
         <FontAwesomeIcon icon={faSpinner} spin />
       ) : isRegistered ? (
@@ -190,7 +190,7 @@ const Register = () => {
           </form>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -85,6 +85,15 @@ td {
   text-align: center;
 }
 
+.logout-btn {
+  padding: 5px 8px;
+  border-radius: 5px;
+  /* border-style: none; */
+  background: #1e6091;
+  color: white;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 100px) {
   .uploads-container {
     flex-direction: column;

@@ -4,7 +4,6 @@
   flex-direction: column;
   border: solid;
   padding: 10px 8px;
-  /* margin: 0px 300px 0px 300px; */
   border-radius: 5px;
   background: #99d98c;
 }
@@ -30,6 +29,7 @@
 }
 .login-btn {
   margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
   padding: 8px 12px;
   border-radius: 5px;
@@ -54,10 +54,6 @@
 .layout {
   height: 100vh;
   padding: 20px;
-  flex: 1;
-  /* width: 100%; */
+  width: 100%;
   background-color: #b5e48c;
-}
-
-@media only screen and (min-width: 100px) {
 }

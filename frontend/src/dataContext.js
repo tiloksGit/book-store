@@ -2,7 +2,7 @@ import { createContext, useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faSpinner, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const dataContext = createContext({});
 
@@ -176,6 +176,7 @@ export const DataProvider = ({ children }) => {
         setAuthPending,
         FontAwesomeIcon,
         faSpinner,
+        faSearch,
       }}
     >
       {children}

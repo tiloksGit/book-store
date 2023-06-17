@@ -21,11 +21,6 @@ const Navbar = () => {
           <p>{localStorage.getItem("name").charAt(0)}</p>My Profile
         </div>
       </Link>
-      <p>
-        <button className="logout-btn" onClick={handleLogout}>
-          Logout
-        </button>
-      </p>
     </nav>
   );
 };

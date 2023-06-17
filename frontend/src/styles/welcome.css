@@ -1,9 +1,22 @@
 .welcome-page {
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: xx-large;
   height: 100vh;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   background-color: aquamarine;
+}
+
+p {
+  padding: px 0;
+}
+
+@media only screen and (max-width: 490px) {
+  .welcome-page {
+    background-color: aquamarine;
+    width: 100%;
+    font-size: large;
+  }
 }

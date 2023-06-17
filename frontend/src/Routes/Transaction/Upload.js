@@ -77,7 +77,7 @@ const Upload = () => {
   };
 
   return (
-    <div className="form-container fade">
+    <div className="form-container">
       {isLoading ? (
         <div className="loading">
           <FontAwesomeIcon icon={faSpinner} spin />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Notification from "../Notification";
 import Sidebar from "./Sidebar";
 import { useState, useEffect, useContext } from "react";
@@ -10,7 +10,6 @@ import Footer from "../Components/Footer";
 
 const Layout = () => {
   const { setAccessToken } = useContext(dataContext);
-  const navigate = useNavigate();
   return (
     <>
       <div className="App-parent">
@@ -19,9 +18,6 @@ const Layout = () => {
           <Sidebar />
         </div>
         <div className="App">
-          {/* <div>
-            <Sidebar />
-          </div> */}
           <main className="layout-main-section">
             <Outlet />
           </main>
