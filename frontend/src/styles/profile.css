@@ -9,11 +9,12 @@
 .profile-details {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  text-align: left;
 }
 
 .profile-details p {
-  padding: 3px 10px;
+  padding: 3px 0px;
 }
 
 .uploads-container {
@@ -21,16 +22,16 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding-bottom: 20px;
 }
 
 .myUploads {
   display: flex;
-  flex-wrap: wrap;
+
   flex-direction: column;
-  width: 25%;
-  height: 80%;
+  width: 20%;
+  height: 300px;
   padding: 5px 8px;
   margin: 0 10px;
   border: burlywood solid 1px;
@@ -41,8 +42,9 @@
 .myUploads img {
   height: 60%;
   width: 90%;
+  padding-top: 5px;
   border-radius: 8px;
-  margin-bottom: 0px 20px 0px;
+  margin-bottom: 0px 10px 0px;
 }
 
 .delete-user-btn-container {
@@ -51,7 +53,7 @@
 
 .delete-user-btn-container button {
   margin-left: 0;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   background-color: aqua;
 }
 
@@ -81,12 +83,13 @@ tr {
 td {
   margin: 0px;
   border: solid;
-  width: 200px;
+  width: 50%;
   text-align: center;
 }
 
 .logout-btn {
   padding: 5px 8px;
+  margin-bottom: 10px;
   border-radius: 5px;
   /* border-style: none; */
   background: #1e6091;
@@ -94,16 +97,19 @@ td {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 100px) {
+@media only screen and (max-width: 500px) {
   .uploads-container {
-    flex-direction: column;
+    padding-top: 15px;
+    width: 100%;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
   }
-}
 
-@media only screen and (min-width: 1000px) {
-  .uploads-container {
-    flex-direction: row;
+  .myUploads {
+    font-size: 0.6rem;
+    height: 300px;
+    width: 40%;
+    margin: 10px;
   }
 }

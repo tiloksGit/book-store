@@ -1,5 +1,4 @@
 .book-card {
-  /* margin: 20px 0 50px; */
   padding: 20px;
   width: 100%;
   height: 450px;
@@ -13,9 +12,13 @@
   justify-content: center;
   background-color: rgba(164, 209, 194, 0.384);
   transition: transform 0.1s ease-in-out;
-  /* gap: 10px; */
 }
 
+.book-card img {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+}
 .book button {
   padding: 8px 12px;
   cursor: pointer;
@@ -31,5 +34,17 @@
 }
 
 .book-card ul li {
-  padding: 5px 0;
+  padding: 3px 0;
+}
+
+.book-card button {
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .book-card {
+    font-size: 0.7rem;
+    height: 330px;
+  }
 }

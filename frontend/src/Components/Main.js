@@ -2,86 +2,9 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import dataContext from "../dataContext";
 import "../styles/home.css";
-// const Main = () => {
-//   const { userName, accessToken, setMsg } = useContext(dataContext);
-
-//   const [displayContent, setDisplayContent] = useState("");
-//   useEffect(() => {
-//     setMsg(null);
-//     const getContent = async () => {
-//       try {
-//         const response = await fetch(
-//           "https://bookstore-backend-kt7c.onrender.com/",
-//           {
-//             method: "GET",
-//             headers: {
-//               "Content-Type": "text/html",
-//             },
-//           }
-//         );
-
-//         if (response.ok) {
-//           const htmlContent = await response.text();
-//           setDisplayContent(htmlContent);
-//         }
-//       } catch (err) {
-//         alert(err.message);
-//       }
-//     };
-
-//     getContent();
-//   }, [accessToken]);
-
-//   useEffect(() => {
-//     const getUserDetails = async () => {
-//       try {
-//         const userResponse = await fetch(
-//           "https://bookstore-backend-kt7c.onrender.com/users/profile",
-//           {
-//             method: "POST",
-//             headers: {
-//               "Content-Type": "application/json",
-//               Authorization: `Bearer ${accessToken}`,
-//             },
-//             body: JSON.stringify({ username: userName }),
-//           }
-//         );
-
-//         const userData = await userResponse.json();
-
-//         if (userResponse.status === 200) {
-//           // setUser(userData);
-//           localStorage.setItem("user", JSON.stringify(userData));
-//         } else {
-//           alert(userData.message);
-//         }
-//       } catch (err) {
-//         alert(err.message);
-//       }
-//     };
-//     getUserDetails();
-//   }, [accessToken]);
-
-//   return (
-//     <div
-//       style={{
-//         backgroundImage:
-//           "https://c1.wallpaperflare.com/preview/127/366/443/library-book-bookshelf-read.jpg",
-//       }}
-//     >
-//       <p className="log-info">You are Signed in as: {userName}</p>
-//       <div dangerouslySetInnerHTML={{ __html: displayContent }} />
-//     </div>
-//   );
-// };
-
-// export default Main;
-
-// import Carousel from "react-bootstrap/Carousel";
-// import "bootstrap/dist/css/bootstrap.css";
 
 function UncontrolledExample() {
-  const { userName, accessToken, setMsg } = useContext(dataContext);
+  const { userName, accessToken } = useContext(dataContext);
 
   useEffect(() => {
     const getUserDetails = async () => {
@@ -125,10 +48,14 @@ function UncontrolledExample() {
     "https://www.befunky.com/images/prismic/1f427434-7ca0-46b2-b5d1-7d31843859b6_funky-focus-red-flower-field-after.jpeg?auto=avif,webp&format=jpg&width=863",
   ];
 
-  let timeout;
   const carouselController = (e = count) => {
     // setCount(e);
     setImgUrl(images[e]);
+    setCaption(
+      `Hey its ${e + 1}${
+        e === 0 ? "st" : e === 1 ? "nd" : e === 2 ? "rd" : "th"
+      } picture`
+    );
     setCount(e);
     if (count === images.length - 1) {
       setCount(0);

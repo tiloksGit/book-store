@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "../styles/layout.css";
 const Sidebar = () => {
   return (
-    <div className="sidebar-parent">
+    <div className="sidebar-parent overlay fade">
       <ul>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "list")}

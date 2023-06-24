@@ -173,14 +173,38 @@ nav {
     padding: 0px;
   }
 
+  .sidebar-parent {
+    position: absolute;
+    width: 100%;
+  }
   .sidebar-parent ul {
     display: flex;
+    position: relative;
     flex-direction: column;
     flex: 1;
     justify-content: center;
     align-items: center;
   }
 
+  .overlay {
+    z-index: 9;
+  }
+  .dropdown-btn {
+    background-color: #b5e48c;
+    text-align: right;
+  }
+  .dropdown-btn button {
+    width: 30px;
+    margin: 5px;
+  }
+
+  .list {
+    width: 100%;
+  }
+
+  .active {
+    width: 100%;
+  }
   .layout-main-section {
     flex: 1;
     min-height: 100vh;
@@ -194,13 +218,5 @@ nav {
 
   .logout-btn {
     padding: 3x 5px;
-  }
-
-  .list {
-    width: 100%;
-  }
-
-  .active {
-    width: 100%;
   }
 }

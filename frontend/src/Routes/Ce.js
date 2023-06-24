@@ -14,7 +14,7 @@ const Ce = () => {
     }
   }, [books]);
   return (
-    <div className="page">
+    <div className="page fade">
       <h1>Civil Engineering Books Section</h1>
       {ceBooks?.length ? (
         <div className="book-container">
@@ -31,7 +31,7 @@ const Ce = () => {
           ))}
         </div>
       ) : (
-        <div className="page">
+        <div className="page fade">
           <h4>No books available currently</h4>
         </div>
       )}

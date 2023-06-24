@@ -134,11 +134,6 @@ const Profile = () => {
       ) : (
         <>No Books uploaded for sale</>
       )}
-      <p>
-        <button className="logout-btn" onClick={handleLogout}>
-          Logout
-        </button>
-      </p>
     </div>
   );
 };

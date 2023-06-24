@@ -1,13 +1,9 @@
-import React, { useContext } from "react";
 import SearchBar from "./SearchBar";
 import "../styles/layout.css";
 import { Link } from "react-router-dom";
-import LoginContext from "../dataContext";
 import logo from "../public/logo.jpeg";
 
 const Navbar = () => {
-  const { handleLogout } = useContext(LoginContext);
-
   return (
     <nav>
       <div className="logo">

@@ -16,7 +16,7 @@ const Ee = () => {
   }, []);
 
   return (
-    <div className="page">
+    <div className="page fade">
       <h1>Electrical Engineering Books Section</h1>
       {eeBooks?.length ? (
         <div className="book-container">
@@ -33,7 +33,7 @@ const Ee = () => {
           ))}
         </div>
       ) : (
-        <div className="page">
+        <div className="page fade">
           <h4>No books available currently</h4>
         </div>
       )}

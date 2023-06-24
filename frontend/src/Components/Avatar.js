@@ -6,12 +6,19 @@ const Avatar = ({ avatarName, avatarURL }) => {
   return (
     <div className="avatar-container">
       <div className="avatar-img">
-        <img
-          src={avatarURL}
-          alt={avatarName ? avatarName.charAt(0) : "Could not load image"}
-          height="300px"
-          width="300px"
-        />
+        {avatarURL ? (
+          <>
+            <img
+              src={avatarURL}
+              alt={avatarName ? avatarName.charAt(0) : "Could not load image"}
+            />
+          </>
+        ) : (
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
+            alt={avatarName ? avatarName.charAt(0) : "Could not load image"}
+          />
+        )}
       </div>
       <div className="avatar-details">
         <b>{`${name}`}</b>
