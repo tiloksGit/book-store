@@ -13,6 +13,9 @@
 
 .contact-us {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30%;
 }
 .contact-form {
   font-size: small;
