@@ -16,21 +16,16 @@ const PORT = process.env.PORT || 9000;
 
 console.log(process.env.NODE_ENV);
 connectDB();
+
 app.use(logger);
-
-//cross origin resource sharing
-// app.use(cors({ credentials: true }));
 app.use(cors(corsOptions));
-
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(express.urlencoded({ extended: false }));
-
 app.use(express.json());
 app.use(cookieParser());
-
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/users/avatar", express.static("avatar"));
 app.use("/books/bookThumbnail", express.static("bookThumbnail"));
+
 
 app.use("/", require("./Routes/root"));
 app.use("/users", require("./Routes/userRoutes"));
